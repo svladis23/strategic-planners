@@ -14,6 +14,12 @@ Maps how a topic is framed, discussed, and constructed in Israeli news media and
 
 Use cases: client onboarding in unfamiliar topic territory, quarterly discourse refreshes, pitch prep, strategic positioning research.
 
+### [`category-research/`](category-research/)
+
+Deep competitive analysis for onboarding a new client brand into an unfamiliar category. Input: brand + category. Output: a SumItUp-branded English deck covering the client and 3–10 competitors, with research briefs, marketing intelligence, optional YouTube creative scan, and a clickable sources appendix.
+
+Use cases: new client onboarding, pitch prep, category audit before strategic work begins.
+
 *More skills will be added here as they're built.*
 
 ---
