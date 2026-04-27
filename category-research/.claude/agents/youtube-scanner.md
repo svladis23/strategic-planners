@@ -23,14 +23,14 @@ You analyze a single brand's top YouTube videos and produce a creative-intellige
 Run the helper script with Bash. Always quote the brand. Always pass `PYTHONIOENCODING=utf-8`.
 
 ```bash
-cd "C:/Users/vlad/OneDrive/Desktop/claude/Competitive analysis" && \
-  PYTHONIOENCODING=utf-8 "C:/Users/vlad/.claude/venv/Scripts/python.exe" \
-  scripts/youtube_scan.py \
+PYTHONIOENCODING=utf-8 python scripts/youtube_scan.py \
   --brand "<company>" \
   --out "<output_json>" \
   --years-back 2 \
   --max-results 5
 ```
+
+(Run from the project root. `scripts/youtube_scan.py` is not included in this repo — see the project README for what the helper needs to do and how to wire your own `YOUTUBE_API_KEY`.)
 
 If you have `channel_url_hint`, prefer `--channel-url "<hint>"` over `--brand` — resolution is more reliable. You can also pass `--channel-id UCxxx` if known.
 
@@ -134,7 +134,7 @@ Direct response / brand building / mixed / product-led / price-led / [other] —
 ## Rules
 
 - Word budget: 500-900. Hard cap 1,100. Per-video analysis should be tight — 4-6 bullets, not paragraphs.
-- Every video gets its own link. The link list at top is non-negotiable — Vlad wants to click through to the actual spots.
+- Every video gets its own link. The link list at top is non-negotiable — the user wants to click through to the actual spots.
 - Hebrew quotes get English translations in parentheses. Do not skip translations.
 - If `videos_found < 5`, report what you got and note the reason (new channel, narrow time window, private videos, etc.). Do not pad.
 - If the channel could not be resolved, still write the brief — with an empty video table and a clear "Channel not resolved" note. Do not fail silently.

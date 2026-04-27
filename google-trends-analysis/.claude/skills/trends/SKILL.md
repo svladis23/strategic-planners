@@ -12,14 +12,14 @@ If the user provides no args, ask for brand + category before proceeding.
 
 ### Step 1 — Interactive brief building (NO subagent, main session works with user)
 
-**The brief is the single most important step.** Each term is a bet that costs time and pytrends rate-limit budget. A weak adjacent-terms bucket limits the "why" analysis; a wrong competitor set wastes 30+ min of fetching. Walk Vlad through each section one at a time, get explicit approval, move to next.
+**The brief is the single most important step.** Each term is a bet that costs time and pytrends rate-limit budget. A weak adjacent-terms bucket limits the "why" analysis; a wrong competitor set wastes 30+ min of fetching. Walk the user through each section one at a time, get explicit approval, move to next.
 
 **Do NOT bulk-propose the whole brief and ask for one approval.** Break it into the 7 sections below. For each, propose 3–8 candidates with reasoning, then ask: "Approve this? Add, remove, or replace?"
 
 Only after ALL sections are approved, write the final JSON to `data/brief_pending.json`.
 
 #### Section 1 — Research question + hypotheses
-State the client's actual question and 2–3 testable hypotheses that the data should confirm or refute. Example: "Hypothesis: the credential→job logic is eroding. Testable via: trend in 'תואר שווה', rising queries for alternatives, SoV shift to online/bootcamp terms." Get Vlad's approval on what you're actually testing before proposing any terms.
+State the client's actual question and 2–3 testable hypotheses that the data should confirm or refute. Example: "Hypothesis: the credential→job logic is eroding. Testable via: trend in 'תואר שווה', rising queries for alternatives, SoV shift to online/bootcamp terms." Get the user's approval on what you're actually testing before proposing any terms.
 
 #### Section 2 — Brand terms
 Propose 2–5 variants (Hebrew + English if relevant). Note which is the primary "head" term. Flag ambiguous brand names.
@@ -48,12 +48,12 @@ Show the consolidated JSON. Confirm geo (IL default), hl (he-IL default), timefr
 - Max 5 terms per list (pytrends hard limit per request)
 - Prefer `competitor_terms` as a dict (name → term list)
 - When in doubt, ask rather than guess
-- If Vlad says "run in one run / no permissions / decide alone", skip the interactive dance BUT still do all 7 sections internally and show the brief as a final summary for informational transparency
+- If the user says "run in one run / no permissions / decide alone", skip the interactive dance BUT still do all 7 sections internally and show the brief as a final summary for informational transparency
 
 ### Step 2 — Initialize run + fetch
 
 ```bash
-"C:/Users/vlad/.claude/venv/Scripts/python.exe" src/runner.py init --brief data/brief_pending.json
+python src/runner.py init --brief data/brief_pending.json
 ```
 
 This prints the run directory. Capture it — you'll need it for every subsequent step. (You can also pass `--out data/explicit_name`.)
@@ -61,7 +61,7 @@ This prints the run directory. Capture it — you'll need it for every subsequen
 Then fetch (this is the slow step — 5-15 minutes depending on brief size):
 
 ```bash
-"C:/Users/vlad/.claude/venv/Scripts/python.exe" src/runner.py fetch --run <RUN_DIR>
+python src/runner.py fetch --run <RUN_DIR>
 ```
 
 Run in background via Bash `run_in_background: true`. Tell the user it'll take several minutes and you'll resume when it finishes.
@@ -69,8 +69,8 @@ Run in background via Bash `run_in_background: true`. Tell the user it'll take s
 ### Step 3 — Stats + charts (fast, <10 seconds)
 
 ```bash
-"C:/Users/vlad/.claude/venv/Scripts/python.exe" src/runner.py stats --run <RUN_DIR>
-"C:/Users/vlad/.claude/venv/Scripts/python.exe" src/runner.py charts --run <RUN_DIR>
+python src/runner.py stats --run <RUN_DIR>
+python src/runner.py charts --run <RUN_DIR>
 ```
 
 ### Step 4 — Spawn 3 sub-agents in parallel

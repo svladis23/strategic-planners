@@ -22,12 +22,11 @@ User invokes `/trends <brand> <category>`. The skill at `.claude/skills/trends/S
 - **sqlite cache** at `cache.db` — deepening loop reuses overlapping queries for free.
 - **Serial pytrends requests** with 15-25s delays; no parallelism against Google.
 - **Geo = Israel only.** No geographic sub-agent. User only works in the Israeli market.
-- **Interactive brief, step-by-step.** Walk through all 7 brief sections (question/hypotheses → brand → competitors → category → adjacent → comparisons → final confirm), get approval each. Never bulk-propose. Only bypass if Vlad explicitly says "one run / no permissions".
+- **Interactive brief, step-by-step.** Walk through all 7 brief sections (question/hypotheses → brand → competitors → category → adjacent → comparisons → final confirm), get approval each. Never bulk-propose. Only bypass if the user explicitly says "one run / no permissions".
 - **Every claim in the PPT gets a plot.** Text-only slides allowed only for cover, section dividers, exec summary, caveats, closing. Bar/line/big-stat per claim. `charts.py` auto-generates sov_bar, yoy_bar, rising_queries, top_queries for this.
 
 ## Python environment
-Always use: `C:\Users\vlad\.claude\venv\Scripts\python.exe`
-Never anaconda.
+Use whatever Python has the skill's dependencies installed. The shell examples below assume `python` is on PATH; replace with your venv's interpreter path if needed.
 
 ## Run outputs
 Each run creates `data/{brand_slug}_{timestamp}/` containing:

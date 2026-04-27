@@ -42,4 +42,4 @@ Recommended list size: <N>
 ...
 ```
 
-Keep it tight. The orchestrator will show this to Vlad for approval and may edit the list before Phase 3 spawns.
+Keep it tight. The orchestrator will show this to the user for approval and may edit the list before Phase 3 spawns.

@@ -36,7 +36,7 @@ Note: deeper marketing intelligence (ad spend estimates, full campaign inventory
 - If foreign brand: how it operates in Israel (importer, franchise, direct)
 
 ## 7. What an outsider needs to know
-- 3-5 bullets: the non-obvious things Vlad would want to know walking into a meeting about this brand
+- 3-5 bullets: the non-obvious things the user would want to know walking into a meeting about this brand
 
 ## 8. Implication for the client (competitors only — skip for the client's own brief)
 - 2-3 bullets answering explicitly: *how does this company threaten or enable <client>?*

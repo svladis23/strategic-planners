@@ -42,6 +42,17 @@ Each skill is independent. They share design conventions but no code or state.
 
 ---
 
+## Note on `sumitup-powerpoint` dependency
+
+All three skills end with a deck-rendering step that invokes a separate skill called `sumitup-powerpoint`. That skill is **not in this repo** — it's a private internal skill that enforces SumItUp's brand specs (navy/teal/gold palette, Heebo font, hand-drawn frames, Hebrew RTL handling). If you're cloning this repo for your own use, you have two options:
+
+1. **Replace the rendering step** with your own deck builder (python-pptx, Slidev, Marp, Google Slides API, etc.). Each skill's pipeline already separates planning (an LLM agent writes a YAML or markdown spec) from rendering (deterministic Python), so swapping the renderer is a localized change.
+2. **Skip the rendering step** entirely. The intermediate artifacts (CSVs, JSON stats packs, narrative markdown, frame deep-dives) are usable as-is for any downstream output format.
+
+The orchestration logic, sub-agent prompts, and analytical pipelines are the reusable substance of these skills. The deck step is the SumItUp-specific finish.
+
+---
+
 ## Design conventions
 
 The skills here follow a few common patterns:

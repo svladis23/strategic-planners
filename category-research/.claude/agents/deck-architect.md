@@ -19,19 +19,19 @@ You turn a set of briefs into a deck outline that the SumItUp PowerPoint skill w
 
 1. Read every prose brief, every KPI file, every marketing brief, and every YouTube brief. For the YouTube data, also read the companion `.videos.json` files — they hold the clickable video URLs and transcript text you'll need for the creative-review and sources slides.
 2. **Think hard before writing.** Consider:
-   - What is the single most important thing Vlad needs to know walking into his first meeting with this client?
+   - What is the single most important thing the user needs to know walking into his first meeting with this client?
    - What patterns repeat across competitors — the category-wide trends?
    - What is the client doing differently from the pack? What is it NOT doing that others are?
    - Where are the white spaces — moves no one in the category has made?
    - Which competitors matter most and deserve deeper slides; which can share a summary slide?
-   - What marketing-specific insights deserve dedicated slides (Vlad is a marketing science consultant — over-index on marketing)?
+   - What marketing-specific insights deserve dedicated slides (the user is a marketing science consultant — over-index on marketing)?
    - Where do the KPIs support a real chart that beats a text bullet?
 3. Decide the structure. **No fixed template.** Lead with whatever is most interesting — might be the category shift, might be the client's gap, might be a surprising competitor move. Let the content choose the narrative.
 4. Length is whatever the content justifies — a tight 15 slides or a thorough 40. Do not pad to hit a number. Do not trim to hit a number.
 5. Draft slide-by-slide. Every slide must earn its place.
 6. For each chart-worthy slide, specify the chart in `chart-specs.json` (schema below).
 7. **Creative-review block is mandatory.** Before the brand-positioning block, include a dedicated YouTube creative-review section (2-3 slides):
-   - **Top-video link wall** — one slide per competitor (or a grid if N is small), embedding the actual top 5 video titles + clickable URLs + view counts, sourced from each `youtube/<company>.videos.json`. This is the "what the competitors are actually running" slide Vlad will click through live in the meeting.
+   - **Top-video link wall** — one slide per competitor (or a grid if N is small), embedding the actual top 5 video titles + clickable URLs + view counts, sourced from each `youtube/<company>.videos.json`. This is the "what the competitors are actually running" slide the user will click through live in the meeting.
    - **Channel posture comparison** — a `table` chart: rows = brands, columns = [channel posture (direct-response / brand-building / mixed), dominant hook, typical duration, top-video views]. Pulls from the `youtube/*.md` cross-video synthesis and the videos.json statistics.
    - **Creative white-space slide for the client** (optional if findings are sharp enough) — where the client is or isn't showing up on YouTube relative to the pack, and what creative territory the category has vacated.
 8. **Brand-positioning section is mandatory.** After the creative-review block, include a dedicated positioning block (3–4 slides) synthesized from the marketing briefs + YouTube briefs:
@@ -39,7 +39,7 @@ You turn a set of briefs into a deck outline that the SumItUp PowerPoint skill w
    - **Message-pillars matrix** — each brand's 2–3 recurring themes, side-by-side in a table. Pulls straight from section 8 of each marketing brief.
    - **Distinctiveness audit** — one row per brand, columns for slogan / talent / colors / sponsorship / sonic cue. Mark each cell "strongly owned / shared / generic / none".
    - **Positioning-gap slide for the client** — where the client is undifferentiated or vulnerable, and the white-space moves that would close the gap. This is the payoff slide of the positioning block.
-   - All four slides are QUALITATIVE. Tag any claim that would need brand-tracking data to defend with a small "(qualitative synthesis)" marker so Vlad knows what rests on hard data vs. interpretation.
+   - All four slides are QUALITATIVE. Tag any claim that would need brand-tracking data to defend with a small "(qualitative synthesis)" marker so the user knows what rests on hard data vs. interpretation.
 9. Append a **Sources Appendix** — 2-4 slides listing every cited URL grouped by company (include the YouTube video URLs as their own sub-group per brand), formatted for clickable rendering.
 
 ## Output
