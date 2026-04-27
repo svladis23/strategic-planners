@@ -1,0 +1,5 @@
+pytrends>=4.9.2
+pandas
+matplotlib
+python-bidi
+jsonschema

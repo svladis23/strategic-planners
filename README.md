@@ -20,6 +20,12 @@ Deep competitive analysis for onboarding a new client brand into an unfamiliar c
 
 Use cases: new client onboarding, pitch prep, category audit before strategic work begins.
 
+### [`google-trends-analysis/`](google-trends-analysis/)
+
+Brand-and-category Google Trends analysis for an Israeli client (Hebrew + English). Interactive 7-section brief → pytrends pull with sqlite cache → pandas stats → 3 parallel sub-agents → synthesizer → branded PPT deck where every claim slide carries a chart. LLMs never see raw time-series data — the stats layer digests first.
+
+Use cases: demand-signal reading, brand-health tracking, share-of-voice audits, audience-intent analysis. No API keys required (uses pytrends).
+
 *More skills will be added here as they're built.*
 
 ---
