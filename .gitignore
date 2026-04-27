@@ -3,10 +3,12 @@
 **/run/
 **/.runs/
 
-# Claude Code local state
-.claude/
+# Claude Code local state (but NOT .claude/agents/ or .claude/skills/ — those are skill content)
 **/.claude/scheduled_tasks.lock
 **/.claude/worktrees/
+**/.claude/settings.local.json
+**/.claude/.env
+**/.claude/skills/*/.env
 
 # Python
 __pycache__/
