@@ -1,0 +1,47 @@
+# Run artifacts (contain client data — never commit)
+**/runs/
+**/run/
+**/.runs/
+
+# Claude Code local state
+.claude/
+**/.claude/scheduled_tasks.lock
+**/.claude/worktrees/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secrets — never commit
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+secrets.json
+
+# Build / temp
+*.log
+*.tmp
+*.bak
+dist/
+build/

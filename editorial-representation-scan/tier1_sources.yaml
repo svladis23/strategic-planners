@@ -1,0 +1,58 @@
+# Tier 1 source list for editorial representation scan
+# These sources are ALWAYS scanned in every run, regardless of topic.
+# Edit this file to add/remove sources globally across all runs.
+
+sources:
+  - name: "Ynet"
+    domain: "ynet.co.il"
+    ideological_position: "mainstream-center"
+    paywall: "none"
+    notes: "Largest IL news site. Strong lifestyle, parenting, consumer, general interest. Primary mainstream voice."
+
+  - name: "Mako"
+    domain: "mako.co.il"
+    ideological_position: "mainstream-center"
+    paywall: "none"
+    notes: "N12 TV supplement. Strong lifestyle, consumer journalism, TV news segment transcripts."
+
+  - name: "Walla"
+    domain: "walla.co.il"
+    ideological_position: "mainstream-center"
+    paywall: "none"
+    notes: "Lifestyle-heavy mainstream portal. Consumer framing dominant."
+
+  - name: "Haaretz"
+    domain: "haaretz.co.il"
+    ideological_position: "left-liberal"
+    paywall: "partial"
+    notes: "Critical and intellectual framing. Strong cultural commentary. Preview text usable when fully paywalled."
+
+  - name: "TheMarker"
+    domain: "themarker.com"
+    ideological_position: "left-liberal"
+    paywall: "partial"
+    notes: "Business consumer angle. Haaretz group — shares left-liberal editorial orientation in business framing."
+
+  - name: "Calcalist"
+    domain: "calcalist.co.il"
+    ideological_position: "mainstream-center"
+    paywall: "partial"
+    notes: "Yedioth business daily. Consumer market coverage, tech industry framing."
+
+  - name: "Globes"
+    domain: "globes.co.il"
+    ideological_position: "mainstream-center"
+    paywall: "partial"
+    notes: "Business framing, consumer market coverage, industry analysis."
+
+  - name: "Srugim"
+    domain: "srugim.co.il"
+    ideological_position: "religious-zionist"
+    paywall: "none"
+    notes: "Religious-Zionist community site. More accessible religious voice than Makor Rishon."
+
+  - name: "Ynetnews"
+    domain: "ynetnews.com"
+    ideological_position: "mainstream-english"
+    paywall: "none"
+    notes: "English-language Ynet supplement. Useful for expat audience framing and international-facing Israeli narratives."
